@@ -28,3 +28,10 @@ make_metagenomeSeq = function(physeq) {
   MGS = cumNorm(MGS)
   return(MGS)
 }
+
+#Many mapping needs to be stripped of comment lines for easy import
+strip_comment_lines <- function(filename,outfile){
+  lines <- readLines(filename)
+  lines <- lines[grep("^#(?!SampleID)",lines, perl=TRUE, invert=TRUE)]
+  writeLines(lines, outfile )
+}
