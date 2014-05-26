@@ -1,3 +1,4 @@
+source("check_packages.R")
 source("import_conversion_common.R")
 
 check_packages()
