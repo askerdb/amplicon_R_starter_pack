@@ -1,5 +1,6 @@
 source("import_conversion_common.R")
 
+check_packages()
 
 strip_comment_lines("mapping_file.txt","mapping_file.txt")
 #If the data was not denovo clustered load the full gg_13 tree. This is pretty big.
