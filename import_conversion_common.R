@@ -1,6 +1,7 @@
 library("phyloseq")
+library("metagenomeSeq")
 
-function load_phyloseq(mapfile, otufile, treefile){
+load_phyloseq <- function(mapfile, otufile, treefile){
   map <- read.table(mapfile, sep="\t", header=TRUE, stringsAsFactors=TRUE, comment.char ="=" )
   file <-import_biom(otufile)
   map <-import_qiime_sample_data(mapfile)
