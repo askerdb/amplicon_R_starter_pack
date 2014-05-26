@@ -1,6 +1,7 @@
 check_packages <- function(){
   if (is.element("devtools", installed.packages()[,1]) == FALSE) {
     install.packages("devtools")
+    library("devtools")
   }
   
   if (is.element('metagenomeSeq', installed.packages()[,1]) == FALSE) {
