@@ -10,6 +10,11 @@ check_packages <- function(){
   }
   
   if (is.element('phyloseq', installed.packages()[,1]) == FALSE) {
+    library("devtools")
+    source("http://bioconductor.org/biocLite.R")
+    biocLite("Biostrings")
+    biocLite("DESeq2")
+    biocLite("multtest")
     install_github("phyloseq", "joey711") #Install bleeding edge of phyloseq
   }
   
