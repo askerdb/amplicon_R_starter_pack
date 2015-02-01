@@ -29,5 +29,10 @@ check_packages <- function(){
   if (is.element("reshape2", installed.packages()[,1]) == FALSE) {
     install.packages("reshape2")
   }
-  
+  if (is.element("pheatmap", installed.packages()[,1]) == FALSE) {
+    install.packages("pheatmap")
+  }
+  if (is.element("plyr", installed.packages()[,1]) == FALSE) {
+    install.packages("plyr")
+  }  
 }
