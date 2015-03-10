@@ -15,7 +15,7 @@ check_packages <- function(){
     biocLite("Biostrings")
     biocLite("DESeq2")
     biocLite("multtest")
-    install_github("phyloseq", "joey711") #Install bleeding edge of phyloseq
+    install_github("joey711/phyloseq") #Install bleeding edge of phyloseq
   }
   
   if (is.element("vegan", installed.packages()[,1]) == FALSE) {
